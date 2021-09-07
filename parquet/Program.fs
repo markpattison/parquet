@@ -56,7 +56,10 @@ let main argv =
 
     let readFile (filename: string) =
         use reader = new ParquetFileReader(filename)
+
+        // example of accessing metadata
         let metadata = reader.FileMetaData
+        let firstColumnName = metadata.Schema.Column(0).Name
 
         let rowGroup = reader.RowGroup(0)
 
