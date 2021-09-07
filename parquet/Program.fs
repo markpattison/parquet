@@ -33,7 +33,7 @@ let timed f x message =
 let main argv =
     
     let nRows = 5000
-    let nColumns = 1200
+    let nColumns = 120
 
     let serialize data =
         Array2D.map JsonSerializer.Serialize data
